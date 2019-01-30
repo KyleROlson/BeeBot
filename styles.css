@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+svg {
+	display: none;
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+h1 {
+	color: #ecf0f1;
+	font-family: Josefin Sans;
+	font-size: 275%;
+	position: absolute;
+	left: 0px;
+	bottom: 0%;
+	margin-left: 10px;
+	margin: 10px;
+}
+h3 {
+	color: #2d3436;
+	font-family: Raleway;
+	font-size: 100%;
+	color: #ecf0f1;
+	position: absolute;
+	right: 0px;
+	bottom: 10%;
+	margin-right: 10px;
+}
+footer {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	left: 0px;
+	bottom: 0%;
+	background-color: #0984e3;
+}
+.card1 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	/* 5px rounded corners */
+	color: #ecf0f1;
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	left: 15%;
+	bottom: 65%;
+	background-color: #ecf0f1;
+}
+.card1:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card2 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	/* 5px rounded corners */
+	color: #ecf0f1;
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	right: 15%;
+	bottom: 65%;
+	background-color: #ecf0f1;
+}
+.card2:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card3 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	/* 5px rounded corners */
+	color: #ecf0f1;
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	left: 15%;
+	bottom: 30%;
+	background-color: #ecf0f1;
+}
+.card3:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card4 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
+	/* 5px rounded corners */
+	color: #ecf0f1;
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	right: 15%;
+	bottom: 30%;
+	background-color: #ecf0f1;
+}
+.card4:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

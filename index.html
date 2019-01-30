@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script src="scripts.js">
+	</script>
+	<title>BeeBot</title>
+</head>
+<body>
+	<svg height='100' width='56' xmlns='http://www.w3.org/2000/svg'>
+	<path d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='#ffeaa7' stroke-width='1'></path></svg>
+	<div class="card1">
+		<div class="container"></div>
+	</div>
+	<div class="card2">
+		<div class="container"></div>
+	</div>
+	<div class="card3">
+		<div class="container"></div>
+	</div>
+	<div class="card4">
+		<div class="container"></div>
+	</div>
+	<footer>
+		<h1>BeeBot</h1>
+		<h3>Welcome back, Kyle! Not you?</h3>
+	</footer>
+	<div id="code"></div>
+	<script>
+	   function svgToBase64Image(svgElement) {
+	 var div = document.createElement('div');
+	 div.appendChild(svgElement.cloneNode(true));
+	 var b64 = window.btoa(div.innerHTML);
+	 return 'data:image/svg+xml;base64,' + b64;
+	}
+	var svgs = document.getElementsByTagName('svg');
+	var urls = [];
+	for (var i = 0; i < svgs.length; i++)
+	 urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
+	var url = urls.join(',');
+	document.body.style.background = url;
+	</script>
+</body>
+</html>
