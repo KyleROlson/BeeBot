@@ -9,36 +9,47 @@
 <body>
 	<svg height='100' width='56' xmlns='http://www.w3.org/2000/svg'>
 	<path d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='#ffeaa7' stroke-width='1'></path></svg>
-	<div class="card1">
-		<div class="container"></div>
+	<div class="signInBox">
+		<div class="container">
+			<h1 class="signInTitle">BeeBot</h1><br>
+			<br>
+			<br>
+			<br>
+			<h5>Email Address</h5>
+			<center>
+				<input id="email">
+			</center><br>
+			<h5>Password</h5>
+			<center>
+				<input id="password" type="password">
+			</center><br>
+			<br>
+			<br>
+			<center>
+				<a href="dashboard.html"><div id="signInBtn">
+					Sign In
+                    </div></a>
+                <a href=""><h6 style="color:#2f3640">Don't have an account? Sign Up.</h6></a>
+			</center>
+		</div>
 	</div>
-	<div class="card2">
-		<div class="container"></div>
-	</div>
-	<div class="card3">
-		<div class="container"></div>
-	</div>
-	<div class="card4">
-		<div class="container"></div>
-	</div>
-	<footer>
+	<!--<footer>
 		<h1>BeeBot</h1>
-		<h3>Welcome back, Kyle! Not you?</h3>
-	</footer>
+	</footer>-->
 	<div id="code"></div>
 	<script>
-	   function svgToBase64Image(svgElement) {
-	 var div = document.createElement('div');
-	 div.appendChild(svgElement.cloneNode(true));
-	 var b64 = window.btoa(div.innerHTML);
-	 return 'data:image/svg+xml;base64,' + b64;
-	}
-	var svgs = document.getElementsByTagName('svg');
-	var urls = [];
-	for (var i = 0; i < svgs.length; i++)
-	 urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
-	var url = urls.join(',');
-	document.body.style.background = url;
+	         function svgToBase64Image(svgElement) {
+	       var div = document.createElement('div');
+	       div.appendChild(svgElement.cloneNode(true));
+	       var b64 = window.btoa(div.innerHTML);
+	       return 'data:image/svg+xml;base64,' + b64;
+	      }
+	      var svgs = document.getElementsByTagName('svg');
+	      var urls = [];
+	      for (var i = 0; i < svgs.length; i++)
+	       urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
+	      var url = urls.join(',');
+	      document.body.style.background = url;
 	</script>
 </body>
 </html>
