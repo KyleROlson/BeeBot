@@ -14,23 +14,25 @@
 		<div class="container">
 			<h1 class="signInTitle">BeeBot</h1><br>
 			<br>
-			<br>
-			<br>
+
+            <h5>Name</h5>
+			<center>
+				<input id="name">
+			</center>
 			<h5>Email Address</h5>
 			<center>
 				<input id="email">
-			</center><br>
+			</center>
 			<h5>Password</h5>
 			<center>
 				<input id="password" type="password">
-			</center><br>
-			<br>
-			<br>
+			</center>
+			<br><br>
 			<center>
-				<a href="#"><div id="signInBtn">
-					Sign In
+				<a href="#"><div id="signUpBtn">
+					Sign Up
                     </div></a>
-                <a href="signUp.html"><h6 style="color:#2f3640">Don't have an account? Sign Up.</h6></a>
+            
 			</center>
 		</div>
 	</div>
@@ -50,7 +52,8 @@
 	      document.body.style.background = url;
 	</script>
     <script>
-    document.getElementById("signInBtn").onclick = function() {signIn(document.getElementById("email").value,document.getElementById("password").value);};
+    document.getElementById("signUpBtn").onclick = function() {signUp(document.getElementById("name").value,document.getElementById("email").value,document.getElementById("password").value);};
+        
     </script>
 </body>
 </html>
