@@ -2,7 +2,9 @@
 <html>
 <head>
 	<link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+	</script>
 	<script src="scripts.js">
 	</script>
 	<title>BeeBot</title>
@@ -27,30 +29,31 @@
 			<br>
 			<br>
 			<center>
-				<a href="#"><div id="signInBtn">
+				<a href="#">
+				<div id="signInBtn">
 					Sign In
-                    </div></a>
-                <a href="signUp.html"><h6 style="color:#2f3640">Don't have an account? Sign Up.</h6></a>
+				</div></a> <a href="signUp.html">
+				<h6 style="color:#2f3640">Don't have an account? Sign Up.</h6></a>
 			</center>
 		</div>
 	</div>
 	<div id="code"></div>
 	<script>
-	         function svgToBase64Image(svgElement) {
-	       var div = document.createElement('div');
-	       div.appendChild(svgElement.cloneNode(true));
-	       var b64 = window.btoa(div.innerHTML);
-	       return 'data:image/svg+xml;base64,' + b64;
-	      }
-	      var svgs = document.getElementsByTagName('svg');
-	      var urls = [];
-	      for (var i = 0; i < svgs.length; i++)
-	       urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
-	      var url = urls.join(',');
-	      document.body.style.background = url;
+	            function svgToBase64Image(svgElement) {
+	          var div = document.createElement('div');
+	          div.appendChild(svgElement.cloneNode(true));
+	          var b64 = window.btoa(div.innerHTML);
+	          return 'data:image/svg+xml;base64,' + b64;
+	         }
+	         var svgs = document.getElementsByTagName('svg');
+	         var urls = [];
+	         for (var i = 0; i < svgs.length; i++)
+	          urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
+	         var url = urls.join(',');
+	         document.body.style.background = url;
+	</script> 
+	<script>
+	   document.getElementById("signInBtn").onclick = function() {signIn(document.getElementById("email").value,document.getElementById("password").value);};
 	</script>
-    <script>
-    document.getElementById("signInBtn").onclick = function() {signIn(document.getElementById("email").value,document.getElementById("password").value);};
-    </script>
 </body>
 </html>

@@ -10,6 +10,7 @@
   firebase.initializeApp(config);
   var displayName = "";
 
+  //Takes user's name, email, and password as parameters and creates an account
   function signUp(name, email, password) {
   	var nameValue = name;
   	var emailValue = email;
@@ -39,6 +40,7 @@
   	});
   }
 
+  //Takes an email and password as parameters and will redirect to the dashboard if successful.
   function signIn(email, password) {
   	var emailValue = email;
   	var passwordValue = password;
@@ -65,6 +67,7 @@
   	});
   }
 
+  //When called, will remove the Firebase authorization and then redirect to the login page.
   function signOut() {
   	firebase.auth().signOut().then(function() {
   		console.log('Signed Out');
@@ -74,14 +77,17 @@
   	});
   }
 
+  //Function called when dashboard is opened, loads content from user's account.
   function loadContent() {
   	firebase.auth().onAuthStateChanged(function(user) {
   		if (user) {
   			document.getElementById("userMsg").innerHTML = "Welcome back, " + user.displayName + "<a href='#' id ='signOutBtn'>! Not you?</a>";
-            document.getElementById("signOutBtn").onclick = function() {signOut();};
-            
+  			document.getElementById("signOutBtn").onclick = function() {
+  				signOut();
+  			};
+  			console.log(user.temperature);
   		} else {
-            console.log("Check");
-        }
+  			console.log("Check");
+  		}
   	});
   }

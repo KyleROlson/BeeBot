@@ -2,7 +2,8 @@
 <html>
 <head>
 	<link href="styles.css" rel="stylesheet" type="text/css">
-        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+	</script>
 	<script src="scripts.js">
 	</script>
 	<title>BeeBot</title>
@@ -16,7 +17,9 @@
 				<center>
 					Temperature
 				</center>
-			</div>
+			</div> 
+            <br>
+            <center><p id='temp'>70°</p></center>
 		</div>
 	</div>
 	<div class="card2">
@@ -26,6 +29,7 @@
 					Humidity
 				</center>
 			</div>
+            <br>
 		</div>
 	</div>
 	<div class="card3">
@@ -35,6 +39,8 @@
 					Food Level
 				</center>
 			</div>
+            <br>
+            <center></center>
 		</div>
 	</div>
 	<div class="card4">
@@ -44,26 +50,27 @@
 					Placeholder 1
 				</center>
 			</div>
+            <br>
 		</div>
 	</div>
 	<footer>
 		<h1>BeeBot</h1>
-        <h3 id="userMsg"></h3> 
+		<h3 id="userMsg"></h3>
 	</footer>
 	<div id="code"></div>
 	<script>
-	      function svgToBase64Image(svgElement) {
-	    var div = document.createElement('div');
-	    div.appendChild(svgElement.cloneNode(true));
-	    var b64 = window.btoa(div.innerHTML);
-	    return 'data:image/svg+xml;base64,' + b64;
-	   }
-	   var svgs = document.getElementsByTagName('svg');
-	   var urls = [];
-	   for (var i = 0; i < svgs.length; i++)
-	    urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
-	   var url = urls.join(',');
-	   document.body.style.background = url;
+	         function svgToBase64Image(svgElement) {
+	       var div = document.createElement('div');
+	       div.appendChild(svgElement.cloneNode(true));
+	       var b64 = window.btoa(div.innerHTML);
+	       return 'data:image/svg+xml;base64,' + b64;
+	      }
+	      var svgs = document.getElementsByTagName('svg');
+	      var urls = [];
+	      for (var i = 0; i < svgs.length; i++)
+	       urls.push('url("' + svgToBase64Image(svgs[i]) + '")');
+	      var url = urls.join(',');
+	      document.body.style.background = url;
 	</script>
 </body>
 </html>
