@@ -82,10 +82,18 @@
   	firebase.auth().onAuthStateChanged(function(user) {
   		if (user) {
   			document.getElementById("userMsg").innerHTML = "Welcome back, " + user.displayName + "<a href='#' id ='signOutBtn'>! Not you?</a>";
+            console.log(user.uid);
+            var leadsRef = firebase.database().ref('/users/' + user.uid);
+            leadsRef.on('value', function(snapshot) {
+            snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+                console.log(childData);
+                document.getElementById("temp").innerHTML = childData + "°";
+            });
+});
   			document.getElementById("signOutBtn").onclick = function() {
   				signOut();
   			};
-  			console.log(user.temperature);
   		} else {
   			console.log("Check");
   		}
