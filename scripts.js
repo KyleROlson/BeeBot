@@ -90,11 +90,11 @@
             var childData = childSnapshot.val();
                 console.log(childData);
                 if (printCount == 0){
-                document.getElementById("temp").innerHTML = childData + "°";
+                document.getElementById("humid").innerHTML = childData + "%";
                 printCount++;
                 }
               else{
-              document.getElementById("humid").innerHTML = childData + "%";
+                document.getElementById("temp").innerHTML = childData + "°";
               }
             });
 });
