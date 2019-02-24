@@ -83,12 +83,20 @@
   		if (user) {
   			document.getElementById("userMsg").innerHTML = "Welcome back, " + user.displayName + "<a href='#' id ='signOutBtn'>! Not you?</a>";
             console.log(user.uid);
-            var leadsRef = firebase.database().ref('/users/' + user.uid);
+            var leadsRef = firebase.database().ref('/users/' + user.uid + 'temperature');
             leadsRef.on('value', function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
             var childData = childSnapshot.val();
                 console.log(childData);
                 document.getElementById("temp").innerHTML = childData + "°";
+            });
+});
+                    var leadsRef = firebase.database().ref('/users/' + user.uid + 'humidity');
+            leadsRef.on('value', function(snapshot) {
+            snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+                console.log(childData);
+                document.getElementById("humid").innerHTML = childData + "°";
             });
 });
   			document.getElementById("signOutBtn").onclick = function() {
