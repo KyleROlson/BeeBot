@@ -84,11 +84,18 @@
   			document.getElementById("userMsg").innerHTML = "Welcome back, " + user.displayName + "<a href='#' id ='signOutBtn'>! Not you?</a>";
             console.log(user.uid);
             var leadsRef = firebase.database().ref('/users/' + user.uid);
+            var printCount = 0;
             leadsRef.on('value', function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
             var childData = childSnapshot.val();
                 console.log(childData);
+                if (printCount == 0){
                 document.getElementById("temp").innerHTML = childData + "°";
+                printCount++;
+                }
+              else{
+              document.getElementById("humid").innerHTML = childData + "%";
+              }
             });
 });
         
