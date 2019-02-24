@@ -94,7 +94,7 @@
                 printCount++;
                 }
               else{
-                document.getElementById("temp").innerHTML = childData + "°";
+                document.getElementById("temp").innerHTML = childData + "° F";
               }
             });
 });
