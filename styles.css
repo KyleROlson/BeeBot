@@ -114,6 +114,11 @@ footer {
 	margin-top: 0px;
 	font-family: 'Open Sans', sans-serif;
 }
+#humid {
+	font-size: 300%;
+	margin-top: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
 .label {
 	width: 100%;
 	height: 10%;
