@@ -71,6 +71,7 @@
   function signOut() {
   	firebase.auth().signOut().then(function() {
   		console.log('Signed Out');
+      localStorage.setItem("staySignedIn", "false");
   		window.location = 'index.html';
   	}, function(error) {
   		console.error('Sign Out Error', error);
