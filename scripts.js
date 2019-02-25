@@ -96,6 +96,7 @@
               else{
                 document.getElementById("temp").innerHTML = childData + "° F";
               }
+              printCount = 0;
             });
 });
         
