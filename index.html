@@ -8,8 +8,13 @@
 	<script src="scripts.js">
 	</script>
 	<title>BeeBot</title>
+	<script>
+	if(localStorage.getItem("staySignedIn") == 'true'){
+		window.location = 'dashboard.html';
+	}
+	</script>
 </head>
-<body onload="alreadySignedIn()">
+<body>
 	<svg height='100' width='56' xmlns='http://www.w3.org/2000/svg'>
 	<path d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='#ffeaa7' stroke-width='1'></path></svg>
 	<div class="signInBox">
