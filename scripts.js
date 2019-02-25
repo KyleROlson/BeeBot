@@ -96,8 +96,8 @@
               else{
                 document.getElementById("temp").innerHTML = childData + "° F";
               }
-              printCount = 0;
             });
+               printCount = 0;
 });
         
   			document.getElementById("signOutBtn").onclick = function() {
