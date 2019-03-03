@@ -1,14 +1,14 @@
 # BeeBot
 Kyle R. Olson
 
-Objective: The goal of this project is to retrieve values from sensors and present them to the end user. The sensors will be connected to a computer (Raspberry Pi) that will retrieve values from the sensors. The values from the sensor will then be uploaded to the users account using a Node.js application. The database will be hosted using Amazon Web Services(AWS). The user will be able to retrieve this information from an HTML web app. 
+Objective: The goal of this project is to retrieve values from sensors and present them to the end user. The sensors will be connected to a chip (ESP8266 Wifi Arduino) that will retrieve values from the sensors. The values from the sensor will then be uploaded to the users account using the Firebase library for Arduino. The database will be hosted using Google's Firebase platform. The user will be able to retrieve this information from an HTML web app. 
 
 Task List:
 * Design UI for Web App
-* Create AWS Database
+* Create Firebase Database
 * Sync Database with Web App
 * Setup sensors
-* Write Node.js app that uploads sensor values with AWS Database(Replaced by using ESP8266 Wifi Module Arduino)
+* Write Arduino sketch that interfaces ESP8266 Wifi Module Arduino with Firebase database. 
 
 Sources:
 - https://philiprogers.com/svgpatterns/#subtledots
