@@ -29,3 +29,6 @@ Work Overview:
 
 2/24/2019- Linked ESP8266 chip to Firebase so now account database is updated real time with actual sensor values.
 
+
+![login](https://kylerolson.github.io/BeeBot/screenshot1.png)
+![dashboard](https://kylerolson.github.io/BeeBot/screenshot2.png)
